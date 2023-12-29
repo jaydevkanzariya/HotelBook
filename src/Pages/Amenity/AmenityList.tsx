@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { debounce } from "lodash";
 
 function AmenityList() {
+  debugger
   const [deleteAmenity] = useDeleteAmenityMutation();
 
   const [searchQuery, setSearchQuery] = useState("");

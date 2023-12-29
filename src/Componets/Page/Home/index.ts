@@ -1,6 +1,6 @@
-import SalonListIndex from "./SalonListIndex";
-import CompanyIndex from "./CompanyIndex";
-import CompanyListSearchIndex from "./CompanyListsearchIndex";
+import HotelListIndex from "./HotelListIndex";
+import HotelIndex from "./HotelIndex";
+import HotelListSearchIndex from "./HotelListsearchIndex";
 import AdminHomePage from "./AdminHomePage";
 
-export { SalonListIndex, CompanyIndex, CompanyListSearchIndex, AdminHomePage,};
+export { HotelListIndex, HotelIndex, HotelListSearchIndex, AdminHomePage,};

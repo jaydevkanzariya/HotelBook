@@ -83,8 +83,9 @@ function HotelList() {
             <div className="row border">
               <div className="col-2">HotelName</div>
               <div className="col-2">StartingPrice</div>
-              <div className="col-2">HotelXAmenity</div>
               <div className="col-1">IsActive</div>
+              <div className="col-2">HotelXAmenity</div>
+              <div className="col-2">HotelXPolicy</div>
               <div className="col-3">Action</div>
             </div>
 
@@ -97,9 +98,18 @@ function HotelList() {
                   <div className="col-2">
                     <button
                       className="btn btn-success"
-                      onClick={() => navigate("/hotelXIndustry/hotelXIndustryUpsert/" + hotel.id)}
+                      onClick={() => navigate("/hotelXAmenity/hotelXAmenityUpsert/" + hotel.id)}
                     >
                       HotelXAmenity
+                      
+                    </button>
+                   </div>
+                   <div className="col-2">
+                    <button
+                      className="btn btn-success"
+                      onClick={() => navigate("/hotelXPolicy/hotelXPolicyUpsert/" + hotel.id)}
+                    >
+                      HotelXPolicy
                       
                     </button>
                    </div>

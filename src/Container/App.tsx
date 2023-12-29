@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Header, Footer, AdminHeader } from "../Componets/Layout";
-import { 
-  Home, 
+import {
+  Home,
   ApplicationRoleList,
   ApplicationRoleUpsert,
   ApplicationUserList,
   ApplicationUserUpsert,
   CountryList,
-   CountryUpsert, 
-    StateList,
-    StateUpsert,
-    CityList,
-    CityUpsert,
+  CountryUpsert,
+  StateList,
+  StateUpsert,
+  CityList,
+  CityUpsert,
   Login,
   Search,
   Register,
@@ -19,18 +19,23 @@ import {
   AccessDenied,
   PolicyList,
   PolicyUpsert,
-  
-
+  HotelXAmenityUpsert,
+  HotelXPolicyUpsert,
+  HotelList,
+  HotelUpsert,
+  AmenityList,
+  AmenityUpsert,
+  Details,
+ 
 } from "../Pages";
 
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 
 function App() {
-
   const [loggedIn, setLoggedIn] = useState(false);
   const [userName, setUserName] = useState("");
-  const receivedRoles = ["Customer", "Admin", "Data Operator"]; 
+  const receivedRoles = ["Customer", "Admin", "Data Operator"];
   const [userRole, setUserRole] = useState(receivedRoles);
 
   useEffect(() => {
@@ -63,13 +68,14 @@ function App() {
   };
   return (
     <div>
-        { (!userRole.includes("Data Operator") ) && (!userRole.includes("Admin")) && (
-      <Header />
-        )}
-
-      {(userRole.includes("Data Operator") || userRole.includes("Admin")) && (
-  <AdminHeader />
-)}
+      {!userRole.includes("Data Operator") && !userRole.includes("Admin") && (
+        <Header />
+      )}
+    
+    {userRole.includes("Data Operator") || userRole.includes("Admin") && (
+        <AdminHeader />
+    )}
+     
 
       <div className="pb-5">
         <Routes>
@@ -79,22 +85,42 @@ function App() {
 
           <Route path="/search/:search" element={<Search />} />
 
-          <Route path="/accessDenied"  element={<AccessDenied/>} />
+          <Route path="/accessDenied" element={<AccessDenied />} />
 
-          <Route path="/applicationRole/applicationRolelist" element={< ApplicationRoleList/>} />
-          <Route path="/applicationRole/applicationRoleUpsert/:id" element={<ApplicationRoleUpsert />} />
-          <Route path="/applicationRole/applicationRoleUpsert" element={<ApplicationRoleUpsert />} />
+          <Route
+            path="/applicationRole/applicationRolelist"
+            element={<ApplicationRoleList />}
+          />
+          <Route
+            path="/applicationRole/applicationRoleUpsert/:id"
+            element={<ApplicationRoleUpsert />}
+          />
+          <Route
+            path="/applicationRole/applicationRoleUpsert"
+            element={<ApplicationRoleUpsert />}
+          />
 
-          
-          <Route path="/applicationUser/applicationUserlist" element={< ApplicationUserList/>} />
-          <Route path="/applicationUser/applicationUserUpsert/:userId" element={<ApplicationUserUpsert />} />
-          <Route path="/applicationUser/applicationUserUpsert" element={<ApplicationUserUpsert />} />
+          <Route
+            path="/applicationUser/applicationUserlist"
+            element={<ApplicationUserList />}
+          />
+          <Route
+            path="/applicationUser/applicationUserUpsert/:userId"
+            element={<ApplicationUserUpsert />}
+          />
+          <Route
+            path="/applicationUser/applicationUserUpsert"
+            element={<ApplicationUserUpsert />}
+          />
 
-          <Route path="/login" element={< Login/>} />
-          <Route path="/register" element={< Register/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
 
           <Route path="/country/countrylist" element={<CountryList />} />
-          <Route path="/country/countryUpsert/:id" element={<CountryUpsert />} />
+          <Route
+            path="/country/countryUpsert/:id"
+            element={<CountryUpsert />}
+          />
           <Route path="/country/countryUpsert" element={<CountryUpsert />} />
 
           <Route path="/state/statelist" element={<StateList />} />
@@ -109,16 +135,25 @@ function App() {
           <Route path="/policy/policyUpsert/:id" element={<PolicyUpsert />} />
           <Route path="/policy/policyUpsert" element={<PolicyUpsert />} />
 
-          <Route path="/amenity/amenitylist" element={<PolicyList />} />
-          <Route path="/amenity/amenityUpsert/:id" element={<PolicyUpsert />} />
-          <Route path="/amenity/amenityUpsert" element={<PolicyUpsert />} />
+          <Route path="/amenity/amenitylist" element={<AmenityList />} />
+          <Route path="/amenity/amenityUpsert/:id" element={<AmenityUpsert />} />
+          <Route path="/amenity/amenityUpsert" element={<AmenityUpsert />} />
 
-          <Route path="/hotel/hotellist" element={<PolicyList />} />
-          <Route path="/hotel/hotelUpsert/:id" element={<PolicyUpsert />} />
-          <Route path="/hotel/hotelUpsert" element={<PolicyUpsert />} />
+          <Route path="/hotel/hotellist" element={<HotelList />} />
+          <Route path="/hotel/hotelUpsert/:id" element={<HotelUpsert />} />
+          <Route path="/hotel/hotelUpsert" element={<HotelUpsert />} />
 
-
+          <Route
+            path="/hotelXAmenity/hotelXAmenityUpsert/:hotelId"
+            element={<HotelXAmenityUpsert />}
+          />
+          <Route
+            path="/hotelXPolicy/hotelXPolicyUpsert/:hotelId"
+            element={<HotelXPolicyUpsert />}
+          />
+          <Route  path="/details/:id" element={<Details/>} />
         </Routes>
+        
       </div>
       <Footer />
     </div>
@@ -126,6 +161,3 @@ function App() {
 }
 
 export default App;
-
-
-

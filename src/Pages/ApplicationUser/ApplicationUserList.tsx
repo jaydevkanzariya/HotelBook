@@ -47,13 +47,13 @@ function ApplicationUserList() {
     return JSON.parse(jsonPayload);
   };
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    if (!userRole.includes("Admin")) {
+  //   if (!userRole.includes("Admin")) {
      
-      navigate("/accessDenied"); 
-    }
-  }, [userRole, navigate]);
+  //     navigate("/accessDenied"); 
+  //   }
+  // }, [userRole, navigate]);
   
   const handleApplicationDelete = async (id: number) => {
     toast.promise(

@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { debounce } from "lodash";
 
 function PolicyList() {
+  debugger
   const [deletePolicy] = useDeletePolicyMutation();
 
   const [searchQuery, setSearchQuery] = useState("");

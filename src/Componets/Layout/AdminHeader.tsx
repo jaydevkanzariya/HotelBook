@@ -21,6 +21,8 @@ function AdminHeader() {
     setUserRole([]);
     window.location.reload();
     navigate("/Home");
+   
+    
   };
 
   useEffect(() => {
@@ -59,7 +61,7 @@ function AdminHeader() {
         <div className="container-fluid">
           <NavLink className="nav-link text-light" aria-current="page" to="/">
 
-            &nbsp;Salon Management Admin Header.....
+            &nbsp;HotelBook Admin
           </NavLink>
 
 
@@ -94,22 +96,22 @@ function AdminHeader() {
                       className="nav-link text-dark"
                       style={{ cursor: "pointer" }}
                       onClick={() =>
-                        navigate("projectSize/projectSizelist")
+                        navigate("amenity/amenitylist")
                       }
                     >
-                      projectSize
+                      Amenity
                     </a>
                   </li>
                   <li className="nav-item">
                     <a
                       className="nav-link text-dark"
                       style={{ cursor: "pointer" }}
-                      onClick={() => navigate("clientType/clientTypelist")}
+                      onClick={() => navigate("hotel/hotellist")}
                     >
-                      Client Type
+                      Hotel
                     </a>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <a
                       className="nav-link text-dark"
                       style={{ cursor: "pointer" }}
@@ -174,13 +176,13 @@ function AdminHeader() {
                     >
                      CompanyLocation
                     </a>
-                  </li>
+                  </li> */}
 
                 </ul>
                 </li>
               
 
-                { (userRole.includes("Admin")  || userRole.includes("Data Operator") ) && (
+                 { (userRole.includes("Admin")  || userRole.includes("Data Operator") ) && ( 
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle text-light"
@@ -227,12 +229,12 @@ function AdminHeader() {
 
                 </ul>
               </li>
-              )}
+               )} 
 
        
 
 
-              { userRole.includes("Admin")  && (
+               { userRole.includes("Admin")  && ( 
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle text-light"
@@ -266,7 +268,7 @@ function AdminHeader() {
               </ul>
 
             </li>
-          )}
+           )} 
         </ul>
       </div>
 

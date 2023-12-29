@@ -8,7 +8,8 @@ import cityApi from "./cityApi";
 import policyApi from "./policyApi";
 import hotelApi from "./hotelApi";
 import amenityApi from "./amenityApi";
-import hotelXAmenity from "./hotelXAmenityApi";
+import hotelXAmenityApi from "./hotelXAmenityApi";
+import hotelXPolicyApi from "./hotelXPolicyApi";
 export {
     applicationRoleApi,
     applicationUserApi,
@@ -20,5 +21,6 @@ export {
     policyApi,
     hotelApi,
     amenityApi,
-    hotelXAmenity,
+    hotelXAmenityApi,
+    hotelXPolicyApi,
 };

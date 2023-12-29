@@ -91,45 +91,7 @@ function CountryUpsert() {
     }
     setLoading(false);
   };
-  //   try {
-  //     let response: apiResponse;
-
-  //     if (id) {
-  //       formData.append("Id", id);
-  //       response = await updateCountry({ data: formData, id });
-
-  //       if (response != null && response.data?.isSuccess) {
-  //         toastNotify("Country updated successfully", "success");
-  //         navigate("/country/countrylist");
-  //       } else {
-  //         if (response.data && response.data.errorMessages != null) {
-  //           toastNotify(response.data.errorMessages[0], "error");
-  //         } else {
-  //           toastNotify("An error occurred", "error");
-  //         }
-  //       }
-  //     } else {
-  //       response = await createCountry(formData);
-
-  //       if (response != null && response.data?.isSuccess) {
-  //         toastNotify("Country created successfully", "success");
-  //         navigate("/country/countrylist");
-  //       } else {
-  //         if (response.data && response.data.errorMessages != null) {
-  //           toastNotify(response.data.errorMessages[0], "error");
-  //         } else {
-  //           toastNotify("An error occurred", "error");
-  //         }
-  //       }
-  //     }
-  //   } catch (error) {
-  //     console.error("API Error:", error);
-  //     toastNotify("An error occurred", "error");
-  //   }
-
-  //   setLoading(false);
-  // };
-
+  
   return (
     <div className="container border mt-5 p-5 bg-light">
       {loading && <MainLoader />}

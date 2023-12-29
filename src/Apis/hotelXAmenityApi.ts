@@ -23,14 +23,14 @@ const hotelXAmentiyApi = createApi({
 
     getHotelXAmentiyByHotelId: builder.query({
       query: (hotelId) => ({
-        url: `HotelXAmentiyAPI/GetHotelXAmentiyByHotel/${hotelId}`,
+        url: `HotelXAmenityAPI/GetHotelXAmenityByHotelId/${hotelId}`,
       }),
       providesTags: ["HotelXAmentiys"],
     }),
 
     createHotelXAmentiy: builder.mutation({
       query: (data) => ({
-        url: "HotelXAmentiyAPI/CreateHotelXAmentiy",
+        url: "HotelXAmenityAPI/CreateHotelXAmenity",
         method: "POST",
         body: data,
       }),

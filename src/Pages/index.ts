@@ -23,6 +23,9 @@ import HotelList from "./Hotel/HotelList";
 import HotelUpsert from "./Hotel/HotelUpsert";
 import AmenityList from "./Amenity/AmenityList";
 import AmenityUpsert from "./Amenity/AmenityUpsert";
+import HotelXAmenityUpsert from "./HotelXAmenity/HotelXAmenityUpsert";
+import HotelXPolicyUpsert from "./HotelXPolicy/HotelXPolicyUpsert";
+import Details from "./Details";
 
 export {
   NotFound,
@@ -50,6 +53,10 @@ export {
   HotelUpsert,
   AmenityList,
   AmenityUpsert,
+  HotelXAmenityUpsert,
+  HotelXPolicyUpsert,
+  Details,
+  
 
 
 

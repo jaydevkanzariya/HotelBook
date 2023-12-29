@@ -106,7 +106,7 @@ function CityList() {
               <div className="col-1">Id</div>
               <div className="col-2">City Name</div>
               <div className="col-2">Country Name</div>
-              <div className="col-2">City Name</div>
+              <div className="col-2">State Name</div>
               <div className="col-2">Is Active</div>
               <div className="col-3">Action</div>
             </div>

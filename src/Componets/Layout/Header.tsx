@@ -71,7 +71,7 @@ function Header() {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Search Company"
+                    placeholder="Search Hotel"
                     value={search}
                     onChange={(e) => setSearchText(e.target.value)}
                   />
@@ -88,7 +88,7 @@ function Header() {
                 )}
 
 
-{ userRole.includes("Customer")  && (
+{/* { userRole.includes("Customer")  && (
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle text-light"
@@ -122,7 +122,7 @@ function Header() {
               </ul>
 
             </li>
-          )}
+          )} */}
         
         </ul>
       </div>

@@ -9,6 +9,8 @@ import { cityReducer } from "./citySlice";
 import { policyReducer } from "./policySlice";
 import { hotelReducer } from "./hotelSlice";
 import { amenityReducer } from "./amenitySlice";
+import {hotelXAmenityReducer} from "./hotelXAmenitySlice";
+import {hotelXPolicyReducer} from "./hotelXPolicySlice";
 
 import {
   applicationRoleApi,
@@ -21,6 +23,8 @@ import {
   policyApi,
   hotelApi,
   amenityApi,
+  hotelXAmenityApi,
+  hotelXPolicyApi,
 } from "../../Apis";
 
 
@@ -36,6 +40,8 @@ const store = configureStore({
     policyStore: policyReducer,
     hotelStore: hotelReducer,
     amenityStore: amenityReducer,
+    hotelXAmenityStore: hotelXAmenityReducer,
+    hotelXPolicyStore: hotelXPolicyReducer,
 
 
 
@@ -49,6 +55,8 @@ const store = configureStore({
     [policyApi.reducerPath]: policyApi.reducer,
     [hotelApi.reducerPath]: hotelApi.reducer,
     [amenityApi.reducerPath]: amenityApi.reducer,
+    [hotelXAmenityApi.reducerPath]: hotelXAmenityApi.reducer,
+    [hotelXPolicyApi.reducerPath]: hotelXPolicyApi.reducer,
 
   },
 
@@ -64,6 +72,8 @@ const store = configureStore({
       .concat(policyApi.middleware)
       .concat(hotelApi.middleware)
       .concat(amenityApi.middleware)
+      .concat(hotelXAmenityApi.middleware)
+      .concat(hotelXPolicyApi.middleware)
 
 
 });

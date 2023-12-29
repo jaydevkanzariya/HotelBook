@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { AdminHomePage, SalonListIndex } from "../Componets/Page/Home";
+import { AdminHomePage,HotelListIndex } from "../Componets/Page/Home";
 
 function Home() {
+  debugger
   const [loggedIn, setLoggedIn] = useState(false);
   const [userName, setUserName] = useState("");
   const receivedRoles = ["Customer", "Admin", "Data Operator"]; 
@@ -42,7 +43,7 @@ function Home() {
     <div>
       {(!userRole.includes("Data Operator") ) && (!userRole.includes("Admin") ) && (
       <div className="container p-2">
-        <SalonListIndex/>
+        <HotelListIndex/>
       </div>
         )}
         

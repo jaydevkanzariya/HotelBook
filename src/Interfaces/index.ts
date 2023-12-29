@@ -12,6 +12,7 @@ import policyModel from "./policyModel";
 import hotelModel from "./hotelModel";
 import amenityModel from "./amenityModel";
 import hotelXAmenityModel from "./hotelXAmenityModel";
+import hotelXPolicyModel from "./hotelXPolicyModel";
 
 export type{
     apiResponse,
@@ -28,6 +29,7 @@ export type{
     hotelModel,
     amenityModel,
     hotelXAmenityModel,
+    hotelXPolicyModel,
 
 
 }
